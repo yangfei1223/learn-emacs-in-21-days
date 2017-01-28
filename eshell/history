@@ -1,0 +1,7 @@
+ls
+mkdir Org
+ls
+cd Org/
+ls
+touch gdt.org
+ls

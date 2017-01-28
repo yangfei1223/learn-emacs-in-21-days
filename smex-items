@@ -1,0 +1,22 @@
+
+;; ----- smex-history -----
+(
+ eshell
+ find-function-on-key
+ find-variable
+ cd
+ lisp-interaction-mode
+ python-mode
+ customize-group
+)
+
+;; ----- smex-data -----
+(
+ (customize-group . 2)
+ (python-mode . 5)
+ (lisp-interaction-mode . 3)
+ (cd . 1)
+ (find-variable . 1)
+ (find-function-on-key . 1)
+ (eshell . 1)
+)
