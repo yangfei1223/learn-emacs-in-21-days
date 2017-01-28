@@ -64,7 +64,6 @@
 
 
 ;;config for smartparens
-(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
 
