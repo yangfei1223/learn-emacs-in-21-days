@@ -20,5 +20,5 @@
  (find-function-on-key . 1)
  (eshell . 1)
  (counsel-git . 3)
- (eval-buffer . 3)
+ (eval-buffer . 4)
 )
