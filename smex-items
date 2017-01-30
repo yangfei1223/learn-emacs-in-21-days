@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ eval-buffer
+ counsel-git
  eshell
  find-function-on-key
  find-variable
  cd
  lisp-interaction-mode
- python-mode
- customize-group
 )
 
 ;; ----- smex-data -----
@@ -19,4 +19,6 @@
  (find-variable . 1)
  (find-function-on-key . 1)
  (eshell . 1)
+ (counsel-git . 3)
+ (eval-buffer . 3)
 )

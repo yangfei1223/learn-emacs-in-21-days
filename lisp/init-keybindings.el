@@ -2,12 +2,11 @@
 
 
 
-
 ;;recent files
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;;old M-x
-(global-set-key (kbd "C-x M-x") 'execute-extended-command)
+(global-set-key (kbd "C-c M-x") 'execute-extended-command)
 
 ;;find function files
 (global-set-key (kbd "C-h C-f") 'find-function)
@@ -28,7 +27,13 @@
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 
 
+;;counsel-git
+(global-set-key (kbd "C-c p f") 'counsel-git)
 
+;;org-agenda binding
+(global-set-key (kbd "C-c a") 'org-agenda)
 
+;;indent region or buffer
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
 (provide 'init-keybindings)

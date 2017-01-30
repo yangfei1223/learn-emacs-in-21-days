@@ -7,8 +7,6 @@
 
 ;;org agenda dir
 (setq org-agenda-files '("~/Org"))
-;;key bind
-(global-set-key (kbd "C-c a") 'org-agenda)
 
 
 (provide 'init-org)
