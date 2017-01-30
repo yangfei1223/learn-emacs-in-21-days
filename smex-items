@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- eval-buffer
- counsel-git
- eshell
- find-function-on-key
- find-variable
- cd
- lisp-interaction-mode
+ customize-group
+ iedit-mode
+ counsel-imenu
+ imenu
+ occur-edit-mode
+ lisp-mode
+ counsel-git-grep
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 2)
+ (customize-group . 9)
  (python-mode . 5)
  (lisp-interaction-mode . 3)
  (cd . 1)
@@ -21,4 +21,12 @@
  (eshell . 1)
  (counsel-git . 3)
  (eval-buffer . 4)
+ (ibuffer . 1)
+ (counsel-git-grep . 1)
+ (lisp-mode . 4)
+ (occur-edit-mode . 1)
+ (imenu . 2)
+ (counsel-imenu . 1)
+ (occur-dwim . 1)
+ (iedit-mode . 2)
 )

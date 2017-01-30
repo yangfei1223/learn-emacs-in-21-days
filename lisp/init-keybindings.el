@@ -43,4 +43,23 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+;;web mode
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+
+;;occur dwin
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+;;imenu
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
+;;expand-region select region
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+;;iedit multi-line edit
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
+
+
+
+
 (provide 'init-keybindings)

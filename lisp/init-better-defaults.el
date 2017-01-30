@@ -17,6 +17,12 @@
 (delete-selection-mode t)
 
 ;;show paren
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 ;;abbrev mode
@@ -71,8 +77,40 @@
 
 (put 'dired-find-alternate-file 'diabled nil)
 
+;;open current buffer's dir
 (require 'dired-x)
-
 (setq dired-dwim-target t)
+
+
+;;hidden dos end of line
+(defun hidden-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+;;remove dos end of line
+(defun remove-dos-end ()
+  "Replace DOS eoflns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
+
+;;improve occur mode
+;;dwin = do what i mean.
+(defun occur-dwim ()
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	     (let ((sym (thing-at-point 'symbol)))
+	       (when (stringp sym)
+		 (regexp-quote sym))))
+	  regexp-history)
+	(call-interactively 'occur))
+
+
 
 (provide 'init-better-defaults)

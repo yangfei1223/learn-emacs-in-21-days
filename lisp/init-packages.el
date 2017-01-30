@@ -17,6 +17,10 @@
 			   js2-mode
 			   exec-path-from-shell
 			   popwin
+			   web-mode
+			   js2-refactor
+			   expand-region
+			   iedit
 			   ) "Default packages")
 
 (setq package-selected-packages yangfei/packages)
@@ -66,12 +70,14 @@
 ;;config for smartparens
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;config for js2-mode
 (setq auto-mode-alist
       (append
-       '(("\\.js\\'" . js2-mode))
-       auto-mode-alist))
+       '(("\\.js\\'" . js2-mode)
+	 ("\\.html\\'" . web-mode))
+	 auto-mode-alist))
 
 ;;let system could find executable
 (when (memq window-system '(mac ns))
@@ -82,6 +88,41 @@
 ;;config for popwin
 (require 'popwin)
 (popwin-mode t)
+
+
+;;config for web mode
+(defun my-web-mode-ident-setup ()
+  (setq web-mode-markup-indent-offset 2) ;html tag
+  (setq web-mode-css-indent-offset 2)    ;css
+  (setq web-mode-code-indent-offset 2)   ;js code
+  )  
+
+(add-hook 'web-mode-hook 'my-web-mode-indent-setup)
+
+
+(defun my-toggle-web-indent ()
+  (interactive)
+  ;;web development
+  (if (or (eq major-mode 'js-mode) (eq major-mode js2-mode))
+      (progn
+	(setq js-indent-level (if (= js-indent-level 2) 4 2))
+	(setq js2-basic-offset (if (= js2-basic-offset 2) 4 2))))
+
+  (if (eq major-mode 'web-mode)
+      (progn (setq web-mode-markup-indent-offset (if (= web-mode-markup-indent-offset 2)4 2))
+	     (setq web-mode-css-indent-offset (if (= web-mode-css-indent-offset 2)4 2))
+	     (setq web-mode-code-indent-offset (if (= web-mode-code-indent-offset 2)4 2))))
+
+  (setq indent-tabs-mode nil))
+
+
+
+;;config for js2-refactor
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+
+
 
 
 
