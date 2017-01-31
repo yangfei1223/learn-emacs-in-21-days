@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- org-pomodoro
+ aya-expand
+ aya-create
+ flycheck-mode
+ flymake-mode
+ helm-do-ag
+ helm-ag
  customize-group
- org-capture
- iedit-mode
- counsel-imenu
- imenu
- occur-edit-mode
 )
 
 ;; ----- smex-data -----
@@ -31,4 +31,13 @@
  (iedit-mode . 2)
  (org-capture . 1)
  (org-pomodoro . 1)
+ (helm-ag . 2)
+ (helm-do-ag . 1)
+ (flymake-mode . 1)
+ (flycheck-mode . 1)
+ (flycheck-buffer . 1)
+ (flycheck-error-list-mode . 1)
+ (flycheck-list-errors . 1)
+ (aya-create . 1)
+ (aya-expand . 2)
 )

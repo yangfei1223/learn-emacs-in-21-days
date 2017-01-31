@@ -22,6 +22,9 @@
 			   expand-region
 			   iedit
 			   org-pomodoro
+			   helm-ag
+			   flycheck
+			   auto-yasnippet
 			   ) "Default packages")
 
 (setq package-selected-packages yangfei/packages)
@@ -71,14 +74,18 @@
 ;;config for smartparens
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
+
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
+
+
 
 ;;config for js2-mode
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode)
 	 ("\\.html\\'" . web-mode))
-	 auto-mode-alist))
+       auto-mode-alist))
 
 ;;let system could find executable
 (when (memq window-system '(mac ns))
@@ -125,6 +132,14 @@
 ;;org-pomodoro
 (require 'org-pomodoro)
 
+;;flycheck activate
+;;(global-flycheck-mode t)
+(add-hook 'prog-mode-hook 'flycheck-mode)
+
+;;yasnippet
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 
 
