@@ -58,7 +58,11 @@
 ;;iedit multi-line edit
 (global-set-key (kbd "M-s e") 'iedit-mode)
 
+;;org capture r aka remember
+(global-set-key (kbd "C-c r") 'org-capture)
 
+;;js2-refactor prefix keybindings
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 
 

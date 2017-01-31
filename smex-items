@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ org-pomodoro
  customize-group
+ org-capture
  iedit-mode
  counsel-imenu
  imenu
  occur-edit-mode
- lisp-mode
- counsel-git-grep
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 9)
+ (customize-group . 10)
  (python-mode . 5)
  (lisp-interaction-mode . 3)
  (cd . 1)
@@ -29,4 +29,6 @@
  (counsel-imenu . 1)
  (occur-dwim . 1)
  (iedit-mode . 2)
+ (org-capture . 1)
+ (org-pomodoro . 1)
 )

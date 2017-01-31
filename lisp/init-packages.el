@@ -21,6 +21,7 @@
 			   js2-refactor
 			   expand-region
 			   iedit
+			   org-pomodoro
 			   ) "Default packages")
 
 (setq package-selected-packages yangfei/packages)
@@ -119,9 +120,10 @@
 
 ;;config for js2-refactor
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-(js2r-add-keybindings-with-prefix "C-c C-m")
 
 
+;;org-pomodoro
+(require 'org-pomodoro)
 
 
 

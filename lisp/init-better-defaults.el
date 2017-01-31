@@ -112,5 +112,11 @@
 	(call-interactively 'occur))
 
 
+;;default encoding to utf-8
+(set-language-environment "UTF-8")
+
+
+
+
 
 (provide 'init-better-defaults)

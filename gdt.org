@@ -1,0 +1,14 @@
+* 工作安排
+
+** TODO [#B] 学习Spacemacs Rocks第二季第六天视频
+
+** TODO [#B] Clean up our configs
+
+** TODO [#B] Learn Spacemacs season 2 day 6 
+   DEADLINE: <2017-01-31 二 15:30> SCHEDULED: <2017-01-31 二 14:30>
+   CLOCK: [2017-01-31 二 14:31]
+
+** TODO [#B] Clean up configs
+
+** TODO [#B] Learn some vim
+
