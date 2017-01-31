@@ -4,7 +4,7 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/.emacs.d/gdt.org")
- (front-context-string . "** TODO [#B] Lea")
- (rear-context-string . "ean up configs\n\n")
- (position . 288))
+ (front-context-string . "** TODO [#B] lea")
+ (rear-context-string . "Learn some vim\n\n")
+ (position . 287))
 )

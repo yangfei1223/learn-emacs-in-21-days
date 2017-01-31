@@ -12,3 +12,16 @@
 
 ** TODO [#B] Learn some vim
 
+** TODO [#B] Learn spacemacs day 7
+*** evil-mode   
+    C-u Universal args
+    Evil state = Vim mode
+    evil normal state
+    evil insert state 
+    evil visual state
+    evil motion state
+    evil emacs state
+    evil operator state (diw)
+
+   
+    

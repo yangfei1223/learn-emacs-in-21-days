@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- aya-expand
- aya-create
- flycheck-mode
- flymake-mode
- helm-do-ag
- helm-ag
  customize-group
+ package-install
+ package-refresh-contents
+ package-autoremove
+ package-list-packages
+ evil-leader-mode
+ aya-expand
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 10)
+ (customize-group . 15)
  (python-mode . 5)
  (lisp-interaction-mode . 3)
  (cd . 1)
@@ -40,4 +40,9 @@
  (flycheck-list-errors . 1)
  (aya-create . 1)
  (aya-expand . 2)
+ (package-list-packages . 7)
+ (evil-leader-mode . 1)
+ (package-install . 4)
+ (package-autoremove . 3)
+ (package-refresh-contents . 1)
 )
