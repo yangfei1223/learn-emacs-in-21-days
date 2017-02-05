@@ -1,6 +1,6 @@
-;;key binding setq
-
-
+;;
+;;    KEY BINDINGS SETTINGS
+;;
 
 ;;recent files
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)

@@ -1,6 +1,6 @@
-;;org mode configure
-
-
+;;
+;;    ORG MODE CONFIGURES
+;;
 
 (with-eval-after-load 'org
 

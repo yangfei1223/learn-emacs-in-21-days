@@ -5,7 +5,36 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'org-install)
-(require 'ob-tangle)
-(org-babel-load-file (expand-file-name "yangfei.org" user-emacs-directory))
-(put 'dired-find-alternate-file 'disabled nil)
+;;use cask to manage packages
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
+;;pallet init
+(require 'pallet)
+(pallet-mode t)
+
+;;add load path
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;;open init.el
+(defun open-my-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
+
+;;load feature
+(require 'init-packages)
+(require 'init-ui)
+(require 'init-better-defaults)
+(require 'init-org)
+(require 'init-keybindings)
+
+;;custom file set
+(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+(load-file custom-file)
+
+
+;;when using org code is needed
+;;(require 'org-install)
+;;(require 'ob-tangle)
+;;(org-babel-load-file (expand-file-name "yangfei.org" user-emacs-directory))

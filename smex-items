@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- customize-group
  package-install
+ pallet-install
+ pallet-init
+ pallet-mode
  package-refresh-contents
- package-autoremove
- package-list-packages
- evil-leader-mode
- aya-expand
+ mwe:log-keyboard-commands
+ mwe:open-command-log-buffer
 )
 
 ;; ----- smex-data -----
@@ -40,9 +40,16 @@
  (flycheck-list-errors . 1)
  (aya-create . 1)
  (aya-expand . 2)
- (package-list-packages . 7)
+ (package-list-packages . 11)
  (evil-leader-mode . 1)
- (package-install . 4)
- (package-autoremove . 3)
- (package-refresh-contents . 1)
+ (package-install . 8)
+ (package-autoremove . 7)
+ (package-refresh-contents . 3)
+ (2048-game . 1)
+ (command-log-mode . 2)
+ (mwe:open-command-log-buffer . 2)
+ (mwe:log-keyboard-commands . 2)
+ (pallet-mode . 2)
+ (pallet-init . 2)
+ (pallet-install . 3)
 )

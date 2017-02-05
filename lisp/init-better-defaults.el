@@ -1,5 +1,6 @@
-;;some better global defaults setting
-
+;;
+;;    BETTER GLOBAL DEFAULTS SETTINGS
+;;
 
 ;;diabled ring bell
 (setq ring-bell-function 'ignore)
@@ -17,12 +18,14 @@
 (delete-selection-mode t)
 
 ;;show paren
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+(defadvice show-paren-function (around fix-show-paren-function activate)
   "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
+  (cond ((looking-at-p "\\s(") ad-do-it)
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+	     ad-do-it)))
+  )
+
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 ;;abbrev mode

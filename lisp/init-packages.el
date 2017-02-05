@@ -1,57 +1,63 @@
-;;package management
-(require 'cl)
+;;
+;;    DEFAULT PACKAGE MANAGEMENT
+;;
 
-(when (>= emacs-major-version 24)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  )
+;;(require 'cl)
+
+;;(when (>= emacs-major-version 24)
+;;  (add-to-list 'package-archives '("melpa" .  "http://elpa.emacs-china.org/melpa/") t)
+;;  )
 
 ;;add whatever packages you want here
-(defvar yangfei/packages '(
-			   company
-			   monokai-theme
-			   hungry-delete
-			   smex
-			   swiper
-			   counsel
-			   smartparens
-			   js2-mode
-			   exec-path-from-shell
-			   popwin
-			   web-mode
-			   js2-refactor
-			   expand-region
-			   iedit
-			   org-pomodoro
-			   helm-ag
-			   flycheck
-			   auto-yasnippet
-			   evil
-			   evil-leader
-			   window-numbering
-			   evil-surround
-			   evil-nerd-commenter
-			   which-key
-			   ) "Default packages")
+;;(defvar yangfei/packages '(
+;;			   company
+;;			   monokai-theme
+;;			   hungry-delete
+;;			   smex
+;;			   swiper
+;;			   counsel
+;;			   smartparens
+;;			   js2-mode
+;;			   exec-path-from-shell
+;;			   popwin
+;;			   web-mode
+;;			   js2-refactor
+;;			   expand-region
+;;			   iedit
+;;			   org-pomodoro
+;;			   helm-ag
+;;			   flycheck
+;;			   auto-yasnippet
+;;			   evil
+;;			   evil-leader
+;;			   window-numbering
+;;			   evil-surround
+;;			   evil-nerd-commenter
+;;			   which-key
+;;			   2048-game
+;;			   mwe-log-commands
+;;			   ) "Default packages")
 
-(setq package-selected-packages yangfei/packages)
+;;(setq package-selected-packages yangfei/packages)
 
 ;;check and install packages
-(defun yangfei/packages-installed-p()
-  (loop for pkg in yangfei/packages
-	when(not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+;;(defun yangfei/packages-installed-p()
+;;  (loop for pkg in yangfei/packages
+;;	when(not (package-installed-p pkg)) do (return nil)
+;;	finally (return t)))
 
-(unless (yangfei/packages-installed-p)
-  (message "%s" "Refeshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg yangfei/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
-
+;;(unless (yangfei/packages-installed-p)
+;;  (message "%s" "Refeshing package database...")
+;;  (package-refresh-contents)
+;;  (dolist (pkg yangfei/packages)
+;;    (when (not (package-installed-p pkg))
+;;      (package-install pkg))))
 
 
 
+;;
+;;   NOW USE CASK TO MANAGE PACKAGES
+;;
 
 ;;config for company
 (global-company-mode t)
