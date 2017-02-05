@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ anaconda-mode
+ company-anaconda
  package-install
+ load-theme
  pallet-install
  pallet-init
  pallet-mode
- package-refresh-contents
- mwe:log-keyboard-commands
- mwe:open-command-log-buffer
 )
 
 ;; ----- smex-data -----
@@ -42,7 +42,7 @@
  (aya-expand . 2)
  (package-list-packages . 11)
  (evil-leader-mode . 1)
- (package-install . 8)
+ (package-install . 11)
  (package-autoremove . 7)
  (package-refresh-contents . 3)
  (2048-game . 1)
@@ -52,4 +52,7 @@
  (pallet-mode . 2)
  (pallet-init . 2)
  (pallet-install . 3)
+ (load-theme . 4)
+ (company-anaconda . 1)
+ (anaconda-mode . 4)
 )

@@ -61,9 +61,14 @@
 
 ;;config for company
 (global-company-mode t)
+;;company-anaconda
+(add-hook 'python-mode-hook
+	  (lambda()
+	    (set (make-local-variable 'company-backends) '((company-anaconda company-dabbrev-code) company-dabbrev))))
 
-;;load monokai-theme
-(load-theme 'monokai t)
+;;load theme
+;;(load-theme 'monokai t)    ;;monokai
+(load-theme 'solarized-dark t)    ;;solarized
 
 ;;config for hungry-delete
 (require 'hungry-delete)
@@ -90,6 +95,8 @@
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 (sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
 
+(sp-local-pair 'emacs-lisp-mode "`" nil :actions nil)
+(sp-local-pair 'lisp-interaction-mode "`" nil :actions nil)
 
 
 ;;config for js2-mode

@@ -33,6 +33,9 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
 
+;;optimize tramp's hanging on when start
+(setq tramp-ssh-controlmaster-options
+      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
 ;;when using org code is needed
 ;;(require 'org-install)

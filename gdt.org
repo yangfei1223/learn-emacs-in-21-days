@@ -10,8 +10,7 @@
 
 ** TODO [#B] Clean up configs
 
-** TODO [#B] Learn some vim
-
+** TODO [#B] Learn some vim   
 ** TODO [#B] Learn spacemacs day 7
 *** evil-mode   
     C-u Universal args
@@ -25,3 +24,5 @@
 
    
     
+** TODO [#B] Learn emacs day 9
+   SCHEDULED: <2017-02-05 日 19:00>
