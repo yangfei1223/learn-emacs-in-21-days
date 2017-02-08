@@ -67,8 +67,8 @@
 	    (set (make-local-variable 'company-backends) '((company-anaconda company-dabbrev-code) company-dabbrev))))
 
 ;;load theme
-;;(load-theme 'monokai t)    ;;monokai
-(load-theme 'solarized-dark t)    ;;solarized
+(load-theme 'monokai t)    ;;monokai
+;;(load-theme 'solarized-dark t)    ;;solarized
 
 ;;config for hungry-delete
 (require 'hungry-delete)
